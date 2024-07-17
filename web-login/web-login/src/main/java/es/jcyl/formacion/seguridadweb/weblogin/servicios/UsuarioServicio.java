@@ -6,7 +6,6 @@ import java.util.Optional;
 
 public interface UsuarioServicio {
 
-
     Optional<Usuario> encontrarUsuarioPorNombreClave (String username, String password);
 
     Optional<Usuario> getUsuarioInfo(String userId);
@@ -14,5 +13,4 @@ public interface UsuarioServicio {
     default Optional<Usuario> obtenerUsuarioInfoPorNombre (String username) {
         return Optional.empty();
     }
-
 }
