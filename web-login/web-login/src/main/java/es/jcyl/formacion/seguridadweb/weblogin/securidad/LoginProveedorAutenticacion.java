@@ -8,16 +8,19 @@ import lombok.NoArgsConstructor;
 import es.jcyl.formacion.seguridadweb.weblogin.servicios.UsuarioDetalleServicio;
 import es.jcyl.formacion.seguridadweb.weblogin.servicios.UsuarioServicio;
 import es.jcyl.formacion.seguridadweb.weblogin.validacion.EntradaValidador;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
+import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
 @Builder
 @AllArgsConstructor
+@Service
 public class LoginProveedorAutenticacion implements AuthenticationProvider {
 
     private final UsuarioServicio userService;
